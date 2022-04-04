@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    background-color: gray;
+    height: 100vh;
+}
+
+.grid-container{
+    margin: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "side . ."
+    "side . ."
+    "side . .";
+    gap: 10px;
+}
+
+.grid-item{
+    padding: 10px;
+    border: 1px white solid;
+    background-color: aqua;
+}
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-row: 2 / -1;
+    grid-column: 2;
+}
